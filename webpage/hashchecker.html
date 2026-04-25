@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Hash Checker</title>
+<link rel="stylesheet" href="./css/hashchecker.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- 标题 & 设置 -->
+  <div class="header-section">
+    <h1>🔐 Hash Checker</h1>
+    <div class="settings-section">
+      <button onclick="toggleTheme()" id="themeBtn">🌙</button>
+      <button onclick="toggleLang()" id="langBtn">🌐</button>
+    </div>
+  </div>
+
+  <!-- 输入 + 算法选择 + 按钮（合并卡片） -->
+  <div class="card input-card">
+    <div class="row">
+      <label for="fileInput">📁 文件</label>
+      <input type="file" id="fileInput">
+    </div>
+    <div class="row">
+      <label for="textInput">⌨ 文本</label>
+      <textarea id="textInput" rows="2" placeholder="输入文本..."></textarea>
+    </div>
+    <div class="row flex">
+      <label for="algorithm">🛡 算法</label>
+      <select id="algorithm">
+        <option value="MD5">MD5</option>
+        <option value="SHA-1">SHA-1</option>
+        <option value="SHA-224">SHA-224</option>
+        <option value="SHA-256" selected>SHA-256</option>
+        <option value="SHA-384">SHA-384</option>
+        <option value="SHA-512">SHA-512</option>
+        <option value="SHA3-224">SHA3-224</option>
+        <option value="SHA3-256">SHA3-256</option>
+        <option value="SHA3-384">SHA3-384</option>
+        <option value="SHA3-512">SHA3-512</option>
+        <option value="RIPEMD160">RIPEMD160</option>
+      </select>
+      <button onclick="calculateHash()" id="calcBtn">🧮 计算</button>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" id="progressBar">0%</div>
+    </div>
+  </div>
+
+  <!-- 结果展示卡片 -->
+  <div class="card result-card">
+    <p>📄 <b>文件名:</b> <span id="fileName">-</span></p>
+    <p>⚖️ <b>大小:</b> <span id="fileSize">-</span></p>
+    <p>🔑 <b>哈希值:</b>
+      <span id="hashValue">-</span>
+      <button class="copy-btn" onclick="copyHash(this, document.getElementById('hashValue').innerText)">📋</button>
+    </p>
+    <p>⏱ <b>耗时:</b> <span id="timeTaken">-</span></p>
+    <p>🕒 <b>时间戳:</b> <span id="timestamp">-</span></p>
+  </div>
+
+  <!-- 比对卡片 -->
+  <div class="card compare-card">
+    <h3>🔎 哈希比对</h3>
+    <input type="text" id="compareInput" placeholder="粘贴目标哈希值">
+    <button onclick="compareHash()" id="compareBtn">✅ 比对</button>
+    <p id="compareResult"></p>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+<script src="js/hashchecker.js"></script>
+</body>
+</html>

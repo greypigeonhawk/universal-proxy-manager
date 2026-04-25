@@ -1,0 +1,3527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>810</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>proxy toolkit</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_main">
+    <property name="geometry">
+     <rect>
+      <x>-9</x>
+      <y>-9</y>
+      <width>1461</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="topbar">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="type" stdset="0">
+        <string>topbar</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="topbar_close">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="type" stdset="0">
+           <string>btn_window</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="topbar_max">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="type" stdset="0">
+           <string>btn_window</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="topbar_min">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="type" stdset="0">
+           <string>btn_window</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_topbar">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="topbar_subtract">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shrink/Expand Interface&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets/asset.qrc">
+            <normaloff>:/svgs/svgs/arrows-switch-svgrepo-com.svg</normaloff>:/svgs/svgs/arrows-switch-svgrepo-com.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="topbar_video">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open flash viewer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets/asset.qrc">
+            <normaloff>:/svgs/svgs/video-course-svgrepo-com.svg</normaloff>:/svgs/svgs/video-course-svgrepo-com.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="topbar_language">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;change language&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets/asset.qrc">
+            <normaloff>:/svgs/svgs/cha-rect-swear-svgrepo-com.svg</normaloff>:/svgs/svgs/cha-rect-swear-svgrepo-com.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="topbar_theme">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;change background picture&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets/asset.qrc">
+            <normaloff>:/svgs/svgs/night-mode-svgrepo-com.svg</normaloff>:/svgs/svgs/night-mode-svgrepo-com.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="topbar_bright">
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;change bright/dark theme&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets/asset.qrc">
+            <normaloff>:/svgs/svgs/lightbulb-idea-svgrepo-com.svg</normaloff>:/svgs/svgs/lightbulb-idea-svgrepo-com.svg</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="mainsection">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QFrame" name="leftbar">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_bars">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/bars-square-svgrepo-com.svg</normaloff>:/svgs/svgs/bars-square-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_tool">
+             <property name="text">
+              <string>Tools</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/tools-repair-svgrepo-com.svg</normaloff>:/svgs/svgs/tools-repair-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_ip">
+             <property name="text">
+              <string>Ips</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/ai-platform-svgrepo-com.svg</normaloff>:/svgs/svgs/ai-platform-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_app">
+             <property name="text">
+              <string>Apps</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/app-store-svgrepo-com.svg</normaloff>:/svgs/svgs/app-store-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_edit">
+             <property name="text">
+              <string>Info</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/info-signs-svgrepo-com.svg</normaloff>:/svgs/svgs/info-signs-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_auto">
+             <property name="text">
+              <string>Auto</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/auto-focus-svgrepo-com.svg</normaloff>:/svgs/svgs/auto-focus-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_spy">
+             <property name="text">
+              <string>spy</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/spy-svgrepo-com.svg</normaloff>:/svgs/svgs/spy-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_test">
+             <property name="text">
+              <string>Test</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/test-tubes-lab-svgrepo-com.svg</normaloff>:/svgs/svgs/test-tubes-lab-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_leftbar">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_leftbar_setting">
+             <property name="text">
+              <string>Setting</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../assets/asset.qrc">
+               <normaloff>:/svgs/svgs/setting-setting-svgrepo-com.svg</normaloff>:/svgs/svgs/setting-setting-svgrepo-com.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="navbar">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>240</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-1576</y>
+             <width>221</width>
+             <height>2329</height>
+            </rect>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>240</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QFrame" name="frame_tools">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_tool">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Tool Search&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_tool</cstring>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_tool">
+                 <property name="inputMask">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>input to search tool</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_tool">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>200</height>
+                  </size>
+                 </property>
+                 <property name="placeholderText">
+                  <string>None</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkbox_global">
+                 <property name="text">
+                  <string>tun mode</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/earth-svgrepo-com.svg</normaloff>:/svgs/svgs/earth-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_system">
+                 <property name="text">
+                  <string>system proxy</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/http-2-svgrepo-com.svg</normaloff>:/svgs/svgs/http-2-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_http_socket">
+                 <property name="inputMask">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>8118</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_http_socket">
+                 <property name="text">
+                  <string>http rebound</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/screen-tv-svgrepo-com.svg</normaloff>:/svgs/svgs/screen-tv-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_tool">
+                 <property name="text">
+                  <string>Confirm</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/confirm-svgrepo-com.svg</normaloff>:/svgs/svgs/confirm-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_tool_off">
+                 <property name="text">
+                  <string>Turn Off</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/close-one-svgrepo-com.svg</normaloff>:/svgs/svgs/close-one-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QFrame" name="frame_app">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_app">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;App search&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_app</cstring>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QGraphicsView" name="graphicsView_app">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>120</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>120</width>
+                   <height>120</height>
+                  </size>
+                 </property>
+                 <property name="lineWidth">
+                  <number>1</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_app_addimage">
+                 <property name="text">
+                  <string>Add image</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/add-to-svgrepo-com.svg</normaloff>:/svgs/svgs/add-to-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_app">
+                 <property name="placeholderText">
+                  <string>input to search apps</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_app">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="placeholderText">
+                  <string>None</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_app_auto">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>auto proxy</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_app_add">
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_app_delete">
+                 <property name="text">
+                  <string>Delete</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_app_launch">
+                 <property name="text">
+                  <string>Launch</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/launch-rocket-svgrepo-com.svg</normaloff>:/svgs/svgs/launch-rocket-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QFrame" name="frame_ip">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_ip">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Ip update&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="buddy">
+                  <cstring>comboBox_ip</cstring>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_ip">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="editable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>None</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_qrcode_url">
+                 <property name="text">
+                  <string>show url qr code</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/plus-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_qrcode_config">
+                 <property name="text">
+                  <string>show config qr code</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGraphicsView" name="graphicsView_qrcode">
+                 <property name="minimumSize">
+                  <size>
+                   <width>160</width>
+                   <height>160</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>160</width>
+                   <height>160</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_ip">
+                 <property name="text">
+                  <string>Update</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/update-repeat-svgrepo-com.svg</normaloff>:/svgs/svgs/update-repeat-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_ip_auto">
+                 <property name="text">
+                  <string>update all</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/update-repeat-svgrepo-com.svg</normaloff>:/svgs/svgs/update-repeat-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QFrame" name="frame_edit">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_edit">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>comboBox_edit</cstring>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_edit">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="placeholderText">
+                  <string>None</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_edit_delete">
+                 <property name="text">
+                  <string>Delete tool</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/delete-svgrepo-com (1).svg</normaloff>:/svgs/svgs/delete-svgrepo-com (1).svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_edit_url">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Edit Url</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_edit_url</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_edit_url">
+                 <property name="placeholderText">
+                  <string>input url to update</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_edit_group">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Url group</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>spinBox_edit</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="spinBox_edit">
+                 <property name="wrapping">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_edit_addurl">
+                 <property name="text">
+                  <string>Add url</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/add-to-svgrepo-com.svg</normaloff>:/svgs/svgs/add-to-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_edit_delurl">
+                 <property name="text">
+                  <string>Delete url</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/delete-svgrepo-com (1).svg</normaloff>:/svgs/svgs/delete-svgrepo-com (1).svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_edit_address">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Edit address and port</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_edit_address</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_edit_agency">
+                 <property name="placeholderText">
+                  <string>agency</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_edit_address">
+                 <property name="placeholderText">
+                  <string>address</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_port">
+                 <property name="placeholderText">
+                  <string>port</string>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_edit_command">
+                 <property name="text">
+                  <string>Edit command</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_command</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_command">
+                 <property name="placeholderText">
+                  <string>command 1</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_command2">
+                 <property name="placeholderText">
+                  <string>command 2</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_command3">
+                 <property name="placeholderText">
+                  <string>command 3</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_edit_confirm">
+                 <property name="text">
+                  <string>Confirm</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/confirm-svgrepo-com (1).svg</normaloff>:/svgs/svgs/confirm-svgrepo-com (1).svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QFrame" name="frame_spy">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_spy">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Terminal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_terminal">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>proxy terminal</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/terminal-svgrepo-com.svg</normaloff>:/svgs/svgs/terminal-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_app">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>app statistics</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/app-store-svgrepo-com.svg</normaloff>:/svgs/svgs/app-store-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_tool">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>tool statistics</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/tools-repair-svgrepo-com.svg</normaloff>:/svgs/svgs/tools-repair-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_web_table">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>web favorites</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/browser-google-chrome-svgrepo-com.svg</normaloff>:/svgs/svgs/browser-google-chrome-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_timecontrol">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>edit image renew time</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSlider" name="horizontalSlider_spy">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="minimum">
+                  <number>4</number>
+                 </property>
+                 <property name="maximum">
+                  <number>604</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>4</number>
+                 </property>
+                 <property name="value">
+                  <number>600</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QFrame" name="frame_auto">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_tool_auto">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Auto anaysis&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_auto">
+                 <property name="placeholderText">
+                  <string>exe file path</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_auto_exe">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>open exe file</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_auto</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_auto_open">
+                 <property name="text">
+                  <string>Open</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/open-svgrepo-com.svg</normaloff>:/svgs/svgs/open-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_auto_config">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>open config file</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_auto_config">
+                 <property name="text">
+                  <string>Open</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/open-svgrepo-com.svg</normaloff>:/svgs/svgs/open-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_auto_appimage">
+                 <property name="text">
+                  <string>Open appimage</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/exe-svgrepo-com.svg</normaloff>:/svgs/svgs/exe-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_auto_analysis">
+                 <property name="text">
+                  <string>Auto analysis</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/exe-svgrepo-com.svg</normaloff>:/svgs/svgs/exe-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_auto_copy">
+                 <property name="text">
+                  <string>copy file</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/copy-link-svgrepo-com.svg</normaloff>:/svgs/svgs/copy-link-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QFrame" name="frame_test">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_test">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Internet test&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_test_web">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>webiste for test</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_test_website</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_test_website">
+                 <property name="placeholderText">
+                  <string>file downloadsite</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_test_host">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>host for test</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_test_host</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_test_host">
+                 <property name="placeholderText">
+                  <string>eg:8.8.8.8</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_test_speed">
+                 <property name="text">
+                  <string>speed test</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/speed-svgrepo-com.svg</normaloff>:/svgs/svgs/speed-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_test_ping">
+                 <property name="text">
+                  <string>ping test</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/ping-pong-racket-svgrepo-com.svg</normaloff>:/svgs/svgs/ping-pong-racket-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_test_latency">
+                 <property name="text">
+                  <string>latency test</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_test_location">
+                 <property name="text">
+                  <string>Geo location</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/location-svgrepo-com.svg</normaloff>:/svgs/svgs/location-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_test_proxy">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>proxy:none</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_test_website</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_test_proxy">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>add proxy</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</normaloff>:/svgs/svgs/nginx-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_test">
+                 <property name="text">
+                  <string>Run</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/go-fuchsia-svgrepo-com.svg</normaloff>:/svgs/svgs/go-fuchsia-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_test_stop">
+                 <property name="text">
+                  <string>Stop</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/stop-svgrepo-com.svg</normaloff>:/svgs/svgs/stop-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_test_all">
+                 <property name="text">
+                  <string>Test all tools</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/screen-tv-svgrepo-com.svg</normaloff>:/svgs/svgs/screen-tv-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>nav_btn</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_setting">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>nav_frame</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_16">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_setting">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Setting&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="type" stdset="0">
+                  <string>header</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_set_start">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Autostarting</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/auto-focus-svgrepo-com.svg</normaloff>:/svgs/svgs/auto-focus-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_set_hide">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>hide when start</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/jsbeautify-svgrepo-com.svg</normaloff>:/svgs/svgs/jsbeautify-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_set_proxy">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>auto launch proxy</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/launch-rocket-svgrepo-com.svg</normaloff>:/svgs/svgs/launch-rocket-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <property name="tristate">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_set_app">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>auto launch app</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/app-store-svgrepo-com.svg</normaloff>:/svgs/svgs/app-store-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_set_global">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>auto tun mode</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/earth-svgrepo-com.svg</normaloff>:/svgs/svgs/earth-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_auto_sysproxy">
+                 <property name="text">
+                  <string>auto system proxy</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../../assets/svgs/proxy-svgrepo-com.svg</normaloff>../../assets/svgs/proxy-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_auto_http">
+                 <property name="text">
+                  <string>auto http rebound</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/http-domain-svgrepo-com.svg</normaloff>:/svgs/svgs/http-domain-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_set_image">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>auto renew image</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/arrows-switch-svgrepo-com.svg</normaloff>:/svgs/svgs/arrows-switch-svgrepo-com.svg</iconset>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget_main">
+          <property name="tabPosition">
+           <enum>QTabWidget::North</enum>
+          </property>
+          <property name="tabShape">
+           <enum>QTabWidget::Triangular</enum>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <property name="elideMode">
+           <enum>Qt::ElideLeft</enum>
+          </property>
+          <property name="usesScrollButtons">
+           <bool>true</bool>
+          </property>
+          <property name="documentMode">
+           <bool>false</bool>
+          </property>
+          <property name="tabsClosable">
+           <bool>false</bool>
+          </property>
+          <property name="movable">
+           <bool>true</bool>
+          </property>
+          <property name="tabBarAutoHide">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="tab_terminal">
+           <property name="type" stdset="0">
+            <string>topbar</string>
+           </property>
+           <attribute name="icon">
+            <iconset resource="../../assets/asset.qrc">
+             <normaloff>:/svgs/svgs/terminal-svgrepo-com.svg</normaloff>:/svgs/svgs/terminal-svgrepo-com.svg</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>terminal</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTextBrowser" name="textBrowser"/>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_terminal">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>topbar</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="horizontalSpacer_terminal">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_terminal">
+                 <property name="text">
+                  <string>hide</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="terminal_down">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;lift the control interface&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/down-arrow-svgrepo-com.svg</normaloff>:/svgs/svgs/down-arrow-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="terminal_up">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;make control interface down&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/up-arrow-svgrepo-com.svg</normaloff>:/svgs/svgs/up-arrow-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="terminal_minus">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;decrease font size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/minus-svgrepo-com.svg</normaloff>:/svgs/svgs/minus-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="terminal_plus">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;increase font size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="terminal_delete">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;delete all content of control panel and terminal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/delete-svgrepo-com (1).svg</normaloff>:/svgs/svgs/delete-svgrepo-com (1).svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="terminal_theme">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;change background color of terminal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/night-mode-svgrepo-com.svg</normaloff>:/svgs/svgs/night-mode-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="textBrowser_bottom">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>100</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="icon">
+            <iconset resource="../../assets/asset.qrc">
+             <normaloff>:/svgs/svgs/test-tubes-lab-svgrepo-com.svg</normaloff>:/svgs/svgs/test-tubes-lab-svgrepo-com.svg</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>dashboard</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_editor">
+           <attribute name="icon">
+            <iconset resource="../../assets/asset.qrc">
+             <normaloff>:/svgs/svgs/edit-text-font-svgrepo-com.svg</normaloff>:/svgs/svgs/edit-text-font-svgrepo-com.svg</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>editor</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QFrame" name="frame_editor">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="type" stdset="0">
+               <string>topbar</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="editor_openfile">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;open file&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/open-svgrepo-com.svg</normaloff>:/svgs/svgs/open-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="editor_new">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;new file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="editor_input">
+                 <property name="maximumSize">
+                  <size>
+                   <width>160</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="inputMask">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>input to search file</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="editor_combo">
+                 <property name="minimumSize">
+                  <size>
+                   <width>160</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>200</height>
+                  </size>
+                 </property>
+                 <property name="placeholderText">
+                  <string>None</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_editor">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>type</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_auto</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="editor_combo_type">
+                 <property name="minimumSize">
+                  <size>
+                   <width>160</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>200</height>
+                  </size>
+                 </property>
+                 <property name="placeholderText">
+                  <string>None</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_editor_path">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>file:</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lineEdit_auto</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="editor_undo">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;undo&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/undo-arrows-svgrepo-com.svg</normaloff>:/svgs/svgs/undo-arrows-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="editor_redo">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;redo&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/redo-arrows-svgrepo-com.svg</normaloff>:/svgs/svgs/redo-arrows-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="editor_save">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;save&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/save-save-file-svgrepo-com.svg</normaloff>:/svgs/svgs/save-save-file-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="editor_clear">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;clear&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="editor_minus">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;decrease font size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/minus-svgrepo-com.svg</normaloff>:/svgs/svgs/minus-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="editor_add">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;increase font size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="textEdit"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_graph">
+           <attribute name="icon">
+            <iconset resource="../../assets/asset.qrc">
+             <normaloff>:/svgs/svgs/graph-svgrepo-com (2).svg</normaloff>:/svgs/svgs/graph-svgrepo-com (2).svg</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>Graph</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_18">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTabWidget" name="tabWidget">
+              <property name="tabShape">
+               <enum>QTabWidget::Triangular</enum>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="tab_table">
+               <attribute name="icon">
+                <iconset resource="../../assets/asset.qrc">
+                 <normaloff>:/svgs/svgs/table-excel-svgrepo-com.svg</normaloff>:/svgs/svgs/table-excel-svgrepo-com.svg</iconset>
+               </attribute>
+               <attribute name="title">
+                <string>table</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_19">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QTableWidget" name="tableWidget">
+                  <property name="autoScrollMargin">
+                   <number>2</number>
+                  </property>
+                  <property name="dragEnabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="dragDropMode">
+                   <enum>QAbstractItemView::NoDragDrop</enum>
+                  </property>
+                  <property name="defaultDropAction">
+                   <enum>Qt::IgnoreAction</enum>
+                  </property>
+                  <property name="alternatingRowColors">
+                   <bool>false</bool>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="textElideMode">
+                   <enum>Qt::ElideLeft</enum>
+                  </property>
+                  <property name="showGrid">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sortingEnabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="cornerButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_table">
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="type" stdset="0">
+                   <string>topbar</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="table_open">
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;open file&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../../assets/asset.qrc">
+                       <normaloff>:/svgs/svgs/open-svgrepo-com.svg</normaloff>:/svgs/svgs/open-svgrepo-com.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="table_combo_file">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <property name="placeholderText">
+                      <string>None</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="table_combo_list">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <property name="placeholderText">
+                      <string>None</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="table_save">
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;save&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../../assets/asset.qrc">
+                       <normaloff>:/svgs/svgs/save-save-file-svgrepo-com.svg</normaloff>:/svgs/svgs/save-save-file-svgrepo-com.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_6">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="table_minus">
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;decrease font size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../../assets/asset.qrc">
+                       <normaloff>:/svgs/svgs/minus-svgrepo-com.svg</normaloff>:/svgs/svgs/minus-svgrepo-com.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="table_plus">
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;increase font size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../../assets/asset.qrc">
+                       <normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_list">
+               <attribute name="icon">
+                <iconset resource="../../assets/asset.qrc">
+                 <normaloff>:/svgs/svgs/list-svgrepo-com.svg</normaloff>:/svgs/svgs/list-svgrepo-com.svg</iconset>
+               </attribute>
+               <attribute name="title">
+                <string>list</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QListWidget" name="listWidget">
+                  <property name="movement">
+                   <enum>QListView::Static</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_tree_2">
+               <attribute name="icon">
+                <iconset resource="../../assets/asset.qrc">
+                 <normaloff>:/svgs/svgs/tree-evergreen-svgrepo-com.svg</normaloff>:/svgs/svgs/tree-evergreen-svgrepo-com.svg</iconset>
+               </attribute>
+               <attribute name="title">
+                <string>tree</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QTreeView" name="treeView"/>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_screen">
+           <attribute name="icon">
+            <iconset resource="../../assets/asset.qrc">
+             <normaloff>:/svgs/svgs/screen-tv-svgrepo-com.svg</normaloff>:/svgs/svgs/screen-tv-svgrepo-com.svg</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>screen</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_web">
+           <attribute name="icon">
+            <iconset resource="../../assets/asset.qrc">
+             <normaloff>:/svgs/svgs/browser-google-chrome-svgrepo-com.svg</normaloff>:/svgs/svgs/browser-google-chrome-svgrepo-com.svg</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>Web</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QFrame" name="frame_webview">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="btn_web_home">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;return to home page&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/home-svgrepo-com.svg</normaloff>:/svgs/svgs/home-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_web_newtab">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;add new tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_web_previous">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;back&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/arrow-left-svgrepo-com.svg</normaloff>:/svgs/svgs/arrow-left-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_web_next">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;forward&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/arrow-right-svgrepo-com.svg</normaloff>:/svgs/svgs/arrow-right-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_web_refresh">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;refresh&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/refresh-svgrepo-com.svg</normaloff>:/svgs/svgs/refresh-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_web">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>please input url</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_web_go">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;go&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/go-fuchsia-svgrepo-com.svg</normaloff>:/svgs/svgs/go-fuchsia-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_web_sites">
+                 <property name="text">
+                  <string>tool sites:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_defaultweb">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_webview">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_web">
+                 <property name="text">
+                  <string>Favorites:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_web">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_web_fav">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;add new url to favorites&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/racing-svgrepo-com.svg</normaloff>:/svgs/svgs/racing-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_web_clear">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;delete this favorite url&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../assets/asset.qrc">
+                   <normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTabWidget" name="tabWidget_browser">
+              <property name="tabShape">
+               <enum>QTabWidget::Triangular</enum>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <property name="tabsClosable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="tab">
+               <attribute name="icon">
+                <iconset>
+                 <normaloff>:/asset_svg/svgs/connect-svgrepo-com.svg</normaloff>:/asset_svg/svgs/connect-svgrepo-com.svg</iconset>
+               </attribute>
+               <attribute name="title">
+                <string>blank</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_13">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QStackedWidget" name="stackedWidget">
+                  <property name="currentIndex">
+                   <number>1</number>
+                  </property>
+                  <widget class="QWidget" name="downloader"/>
+                  <widget class="QWidget" name="history">
+                   <layout class="QVBoxLayout" name="verticalLayout_17">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="frame_webview_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::NoFrame</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_10">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="btn_download_add">
+                         <property name="maximumSize">
+                          <size>
+                           <width>80</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;add new tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         </property>
+                         <property name="text">
+                          <string>add</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../../assets/asset.qrc">
+                           <normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</normaloff>:/svgs/svgs/plus-add-svgrepo-com.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_download_url">
+                         <property name="maximumSize">
+                          <size>
+                           <width>180</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>please input url</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_download_pause">
+                         <property name="maximumSize">
+                          <size>
+                           <width>900</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;add new tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         </property>
+                         <property name="text">
+                          <string>pause all</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../../assets/asset.qrc">
+                           <normaloff>:/svgs/svgs/pause-svgrepo-com.svg</normaloff>:/svgs/svgs/pause-svgrepo-com.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_download_resume">
+                         <property name="maximumSize">
+                          <size>
+                           <width>900</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;add new tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         </property>
+                         <property name="text">
+                          <string>resume all</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../../assets/asset.qrc">
+                           <normaloff>:/svgs/svgs/start-svgrepo-com.svg</normaloff>:/svgs/svgs/start-svgrepo-com.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QToolButton" name="toolButton_download">
+                         <property name="text">
+                          <string>other operations</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../../assets/asset.qrc">
+                           <normaloff>:/svgs/svgs/list-svgrepo-com.svg</normaloff>:/svgs/svgs/list-svgrepo-com.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_download">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_download_path">
+                         <property name="maximumSize">
+                          <size>
+                           <width>180</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>please input url</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="table_open_2">
+                         <property name="toolTip">
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;open file&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         </property>
+                         <property name="text">
+                          <string>change path</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../../assets/asset.qrc">
+                           <normaloff>:/svgs/svgs/open-svgrepo-com.svg</normaloff>:/svgs/svgs/open-svgrepo-com.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_download_tohistory">
+                         <property name="maximumSize">
+                          <size>
+                           <width>100</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;delete this favorite url&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         </property>
+                         <property name="text">
+                          <string>to history</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../../assets/asset.qrc">
+                           <normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</normaloff>:/svgs/svgs/delete-clear-svgrepo-com.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_downlaod_speed">
+                         <property name="text">
+                          <string>Total speed:0  KB/s</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_download_task">
+                         <property name="text">
+                          <string>Tasks:0</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_11">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QTreeWidget" name="treeWidget_download">
+                         <property name="maximumSize">
+                          <size>
+                           <width>180</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="headerHidden">
+                          <bool>true</bool>
+                         </property>
+                         <column>
+                          <property name="text">
+                           <string notr="true">1</string>
+                          </property>
+                         </column>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QTableWidget" name="tableWidget_download">
+                         <property name="columnCount">
+                          <number>7</number>
+                         </property>
+                         <column>
+                          <property name="text">
+                           <string>File name</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>progress</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>state</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Size</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>estimated time</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>operations</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>estimated time</string>
+                          </property>
+                         </column>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="bottombar">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="type" stdset="0">
+        <string>topbar</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_bottom_proxy">
+          <property name="text">
+           <string>⚪Procy:None</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_bottom_tun">
+          <property name="text">
+           <string>⚪Tun:Off</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_bottom_sysproxy">
+          <property name="text">
+           <string>⚪System proxy:Off</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_bottom_http">
+          <property name="text">
+           <string>⚪http:Off</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_bottom_netspeed">
+          <property name="text">
+           <string>🔼:0.00KB/s 🔽:0.00KB/s</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_bottombar">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item alignment="Qt::AlignRight">
+         <widget class="QLabel" name="label_appversion">
+          <property name="text">
+           <string>version:1.1.5.2</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="gif_label">
+    <property name="geometry">
+     <rect>
+      <x>-6</x>
+      <y>-9</y>
+      <width>1461</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>gif_label</zorder>
+   <zorder>frame_main</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../assets/asset.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>terminal_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>textBrowser</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1395</x>
+     <y>674</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1282</x>
+     <y>504</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>terminal_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>textBrowser_bottom</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1395</x>
+     <y>674</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1242</x>
+     <y>701</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editor_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1337</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1190</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

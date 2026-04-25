@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Status Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        #customUrlInput {
+            width: 320px;
+            max-width: 90vw;
+            font-size: 15px;
+            padding: 10px 12px;
+            border: 1px solid #c7c7c7;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        #customUrlInput:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+        }
+
+        #refreshBtn,
+        #addSiteBtn {
+            font-size: 16px;
+            padding: 10px 18px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #refreshBtn {
+            background-color: #007bff;
+        }
+
+        #refreshBtn:hover {
+            background-color: #0568d0;
+        }
+
+        #addSiteBtn {
+            background-color: #198754;
+        }
+
+        #addSiteBtn:hover {
+            background-color: #157347;
+        }
+
+        #formMsg {
+            min-height: 20px;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .msg-ok {
+            color: #157347;
+        }
+
+        .msg-error {
+            color: #b02a37;
+        }
+
+        #grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .site-box {
+            width: 170px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 20px;
+            height: 20px;
+            border: none;
+            border-radius: 50%;
+            background: #f1f3f5;
+            color: #666;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background: #ffe3e3;
+            color: #c92a2a;
+        }
+
+        .site-box img {
+            width: 64px;
+            height: 64px;
+            margin-top: 10px;
+        }
+
+        .site-url {
+            margin-top: 10px;
+            font-size: 13px;
+            word-break: break-word;
+        }
+
+        .status {
+            margin-top: 6px;
+            font-weight: bold;
+        }
+
+        .latency {
+            margin-top: 5px;
+            font-size: 13px;
+            color: #505050;
+        }
+
+        .testing {
+            color: #6c757d;
+        }
+
+        .online {
+            color: green;
+        }
+
+        .offline {
+            color: red;
+        }
+
+        .loader {
+            display: inline-block;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #007bff;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Website Status Monitor</h1>
+    <div class="controls">
+        <input id="customUrlInput" type="text" placeholder="https://example.com">
+        <button id="addSiteBtn">Add</button>
+        <button id="refreshBtn">Refresh</button>
+    </div>
+    <div id="formMsg"></div>
+
+    <div id="grid"></div>
+
+    <script>
+        const STORAGE_KEY = "custom_test_sites";
+        const HIDDEN_DEFAULT_KEY = "hidden_default_sites";
+        const REQUEST_TIMEOUT_MS = 8000;
+        const defaultSites = [
+            { name: "Google", url: "https://www.google.com" },
+            { name: "GitHub", url: "https://www.github.com" },
+            { name: "Baidu", url: "https://www.baidu.com" },
+            { name: "YouTube", url: "https://www.youtube.com" }
+        ];
+
+        const grid = document.getElementById("grid");
+        const refreshBtn = document.getElementById("refreshBtn");
+        const addSiteBtn = document.getElementById("addSiteBtn");
+        const customUrlInput = document.getElementById("customUrlInput");
+        const formMsg = document.getElementById("formMsg");
+
+        function showMessage(text, isError) {
+            formMsg.textContent = text || "";
+            formMsg.className = isError ? "msg-error" : "msg-ok";
+        }
+
+        function normalizeUrl(input) {
+            const parsed = new URL(input.trim());
+            if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+                throw new Error("Only http/https URLs are supported.");
+            }
+            parsed.hash = "";
+            return parsed.href;
+        }
+
+        function siteNameFromUrl(url) {
+            try {
+                return new URL(url).hostname || url;
+            } catch (_error) {
+                return url;
+            }
+        }
+
+        function loadCustomSites() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (!raw) {
+                    return [];
+                }
+                const parsed = JSON.parse(raw);
+                if (!Array.isArray(parsed)) {
+                    return [];
+                }
+                return parsed
+                    .filter((item) => item && typeof item.url === "string")
+                    .map((item) => {
+                        const normalized = normalizeUrl(item.url);
+                        return {
+                            name: item.name || siteNameFromUrl(normalized),
+                            url: normalized
+                        };
+                    });
+            } catch (_error) {
+                return [];
+            }
+        }
+
+        function saveCustomSites(customSites) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(customSites));
+        }
+
+        function loadHiddenDefaultSites() {
+            try {
+                const raw = localStorage.getItem(HIDDEN_DEFAULT_KEY);
+                if (!raw) {
+                    return [];
+                }
+                const parsed = JSON.parse(raw);
+                if (!Array.isArray(parsed)) {
+                    return [];
+                }
+                return parsed
+                    .map((url) => {
+                        try {
+                            return normalizeUrl(url);
+                        } catch (_error) {
+                            return "";
+                        }
+                    })
+                    .filter(Boolean);
+            } catch (_error) {
+                return [];
+            }
+        }
+
+        function saveHiddenDefaultSites(hiddenUrls) {
+            localStorage.setItem(HIDDEN_DEFAULT_KEY, JSON.stringify(hiddenUrls));
+        }
+
+        function allSites(customSites, hiddenDefaultSites) {
+            const hiddenSet = new Set(hiddenDefaultSites);
+            const visibleDefaults = defaultSites
+                .map((site) => ({
+                    name: site.name,
+                    url: normalizeUrl(site.url),
+                    isDefault: true
+                }))
+                .filter((site) => !hiddenSet.has(site.url));
+            const custom = customSites.map((site) => ({
+                name: site.name,
+                url: site.url,
+                isDefault: false
+            }));
+            return visibleDefaults.concat(custom);
+        }
+
+        function buildLatencyTarget(siteUrl) {
+            const parsed = new URL(siteUrl);
+            const target = new URL("/favicon.ico", parsed.origin);
+            target.searchParams.set("_t", Date.now().toString());
+            return target.href;
+        }
+
+        function measureLatency(siteUrl, timeoutMs) {
+            return new Promise((resolve) => {
+                const image = new Image();
+                const start = performance.now();
+                let settled = false;
+
+                function finish(ok, timeout) {
+                    if (settled) {
+                        return;
+                    }
+                    settled = true;
+                    const elapsed = Math.round(performance.now() - start);
+                    resolve({ ok: ok, timeout: timeout, latency: elapsed });
+                }
+
+                const timer = setTimeout(() => {
+                    image.src = "";
+                    finish(false, true);
+                }, timeoutMs);
+
+                image.onload = () => {
+                    clearTimeout(timer);
+                    finish(true, false);
+                };
+
+                image.onerror = () => {
+                    clearTimeout(timer);
+                    finish(false, false);
+                };
+
+                image.src = buildLatencyTarget(siteUrl);
+            });
+        }
+
+        function removeSite(site) {
+            if (site.isDefault) {
+                const hidden = loadHiddenDefaultSites();
+                if (!hidden.includes(site.url)) {
+                    hidden.push(site.url);
+                    saveHiddenDefaultSites(hidden);
+                }
+                showMessage("Website removed.", false);
+                refresh();
+                return;
+            }
+
+            const customSites = loadCustomSites();
+            const nextCustomSites = customSites.filter((item) => item.url !== site.url);
+            saveCustomSites(nextCustomSites);
+            showMessage("Website removed.", false);
+            refresh();
+        }
+
+        function createBox(site) {
+            const box = document.createElement("div");
+            box.className = "site-box";
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.className = "delete-btn";
+            deleteBtn.type = "button";
+            deleteBtn.textContent = "x";
+            deleteBtn.title = "Delete website";
+            deleteBtn.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                removeSite(site);
+            });
+            box.appendChild(deleteBtn);
+
+            const link = document.createElement("a");
+            link.href = site.url;
+            link.target = "_blank";
+
+            const img = document.createElement("img");
+            img.src = "https://www.google.com/s2/favicons?sz=64&domain=" + encodeURIComponent(site.url);
+            img.alt = site.name;
+
+            link.appendChild(img);
+            box.appendChild(link);
+
+            const name = document.createElement("div");
+            name.className = "site-url";
+            name.textContent = site.name;
+            box.appendChild(name);
+
+            const status = document.createElement("div");
+            status.className = "status";
+            status.innerHTML = '<span class="loader"></span>';
+            box.appendChild(status);
+
+            const latency = document.createElement("div");
+            latency.className = "latency testing";
+            latency.textContent = "Latency: Testing...";
+            box.appendChild(latency);
+
+            grid.appendChild(box);
+            checkStatusAndLatency(site.url, status, latency);
+        }
+
+        function checkStatusAndLatency(url, statusElem, latencyElem) {
+            statusElem.className = "status";
+            statusElem.innerHTML = '<span class="loader"></span>';
+            latencyElem.className = "latency testing";
+            latencyElem.textContent = "Latency: Testing...";
+
+            measureLatency(url, REQUEST_TIMEOUT_MS).then((result) => {
+                if (result.ok) {
+                    statusElem.className = "status online";
+                    statusElem.textContent = "Online";
+                    latencyElem.className = "latency";
+                    latencyElem.textContent = "Latency: " + result.latency + " ms";
+                    return;
+                }
+
+                statusElem.className = "status offline";
+                statusElem.textContent = "Offline";
+                latencyElem.className = "latency";
+                latencyElem.textContent = result.timeout ? "Latency: Timeout" : "Latency: --";
+            });
+        }
+
+        function refresh() {
+            grid.innerHTML = "";
+            const customSites = loadCustomSites();
+            const hiddenDefaultSites = loadHiddenDefaultSites();
+            allSites(customSites, hiddenDefaultSites).forEach(createBox);
+        }
+
+        function addCustomSite() {
+            const raw = customUrlInput.value.trim();
+            if (!raw) {
+                showMessage("Please enter a website URL.", true);
+                return;
+            }
+
+            let normalized;
+            try {
+                normalized = normalizeUrl(raw);
+            } catch (_error) {
+                showMessage("Invalid URL. Please use http/https format.", true);
+                return;
+            }
+
+            const customSites = loadCustomSites();
+            const hiddenDefaultSites = loadHiddenDefaultSites();
+            const existing = new Set(
+                allSites(customSites, hiddenDefaultSites).map((site) => {
+                    try {
+                        return normalizeUrl(site.url);
+                    } catch (_error) {
+                        return site.url;
+                    }
+                })
+            );
+            if (existing.has(normalized)) {
+                showMessage("This website already exists.", true);
+                return;
+            }
+
+            const nextCustomSites = customSites.concat([
+                { name: siteNameFromUrl(normalized), url: normalized }
+            ]);
+            saveCustomSites(nextCustomSites);
+            customUrlInput.value = "";
+            showMessage("Website added successfully.", false);
+            refresh();
+        }
+
+        refreshBtn.onclick = refresh;
+        addSiteBtn.onclick = addCustomSite;
+        customUrlInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                addCustomSite();
+            }
+        });
+
+        refresh();
+    </script>
+</body>
+</html>

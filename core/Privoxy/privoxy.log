@@ -1,0 +1,4 @@
+2026-04-22 23:32:49.598 0000186c Fatal error: can't bind to 127.0.0.1:8118: There may be another Privoxy or some other proxy running on port 8118
+2026-04-23 08:33:52.731 00001860 Fatal error: can't bind to 127.0.0.1:8118: There may be another Privoxy or some other proxy running on port 8118
+2026-04-23 22:00:22.744 0000146c Fatal error: can't bind to 127.0.0.1:8118: There may be another Privoxy or some other proxy running on port 8118
+2026-04-23 22:03:36.703 000013a0 Fatal error: can't bind to 127.0.0.1:8080: There may be another Privoxy or some other proxy running on port 8080

@@ -1,0 +1,45 @@
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:53
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  fallback:
+    - tls://1.1.1.1
+    - tls://8.8.8.8
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw        
+      - geolocation-!cn 
+
+proxies:
+  - name: "Proxy"
+    type: socks5
+    server: 127.0.0.1
+    port: 1080
+
+geodata-mode: true
+geox-url:
+  geoip: ./geoip.dat
+  geosite: ./geosite.dat
+  mmdb: ./country.mmdb
+
+rules:
+  # - GEOSITE,cn,DIRECT      
+  # - GEOIP,CN,DIRECT            
+  # - GEOSITE,geolocation-!cn,Proxy  
+  - MATCH,Proxy       
+   
+

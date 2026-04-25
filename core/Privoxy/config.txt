@@ -1,0 +1,7 @@
+listen-address  127.0.0.1:8118
+forward-socks5t / 127.0.0.1:1080 .
+confdir .
+logdir .
+actionsfile match-all.action
+actionsfile default.action
+filterfile default.filter

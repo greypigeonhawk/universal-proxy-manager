@@ -1,0 +1,15 @@
+animation: true
+app_proxy: 2
+auto_app_launch: 0
+auto_global_proxy: 0
+auto_http_proxy: 2
+auto_system_proxy: 2
+auto_wallpaper_toggle: 0
+autolaunch: 0
+autoproxy: 2
+autostart: 2
+language: en
+self_hide: 2
+terminal_back: 1
+theme: 0
+wallpaper_time: 600

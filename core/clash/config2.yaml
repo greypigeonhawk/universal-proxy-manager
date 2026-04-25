@@ -1,0 +1,46 @@
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:53
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+  fallback:
+    - tls://1.1.1.1
+    - tls://8.8.4.4
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "localhost"
+    - "ntp.org"
+    - "time.windows.com"
+    - "stun.*.*"
+    - "dns.google"
+    - "apple.com"
+    - "*.*.ms"
+    - "*.*.apple.com"
+
+rules:
+  - MATCH,Proxy
+
+proxies:
+  - name: "Proxy"
+    type: hysteria2
+    server: your.hysteria.server.address  # 服务器地址，改成你的
+    port: 443                            # hysteria 服务器端口
+    auth_str: "your_auth_password"      # 认证密码，改成你的
+    alpn:
+      - h3                              # 或根据服务器支持修改
+    # 可选字段，按需填写：
+    # protocol: udp
+    # udp: true
+    # obfs: type: http  # 混淆，按需配置

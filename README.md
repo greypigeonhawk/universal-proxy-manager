@@ -1,0 +1,1 @@
+    The app is specifically designed as a toolkit can be used to contain,manage and launch proxy terminals.
