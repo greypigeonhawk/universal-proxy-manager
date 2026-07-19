@@ -1,0 +1,5 @@
+{
+  "name": "Example Core",
+  "executable": "bin/example-core",
+  "startArgs": ["run", "-c", "{config}"]
+}
